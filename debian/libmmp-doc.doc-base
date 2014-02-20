@@ -1,0 +1,10 @@
+Document: libmmp-doc
+Title: libmmp (mikumikupenguin) API Document
+Author: Ben Clapp <benrunnin@gmail.com>
+Abstract: This manual describes what mikumikupenguin is
+ and how it can be used
+Section: unknown
+
+Format: HTML
+Index: /usr/share/doc/libmmp-doc/doxygen/index.html
+Files: /usr/share/doc/libmmp-doc/doxygen/*.html

@@ -1,0 +1,17 @@
+debian/tmp/usr/bin/pmx
+debian/tmp/usr/share/man/man1/pmx.1
+debian/tmp/usr/share/mikumikupenguin/shaders/model.vert
+debian/tmp/usr/share/mikumikupenguin/shaders/model.frag
+debian/tmp/usr/share/mikumikupenguin/shaders/bulletDebug.vert
+debian/tmp/usr/share/mikumikupenguin/shaders/bulletDebug.frag
+debian/tmp/usr/share/mikumikupenguin/textures/toon04.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon08.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon02.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon10.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon07.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/miku.png
+debian/tmp/usr/share/mikumikupenguin/textures/toon06.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon05.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon03.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon01.bmp
+debian/tmp/usr/share/mikumikupenguin/textures/toon09.bmp

@@ -1,0 +1,12 @@
+debian/tmp/usr/lib/i386-linux-gnu/libmmp.a
+debian/tmp/usr/lib/i386-linux-gnu/libmmp.la
+debian/tmp/usr/include/libmmp/bulletphysics.h
+debian/tmp/usr/include/libmmp/texthandle.h
+debian/tmp/usr/include/libmmp/motioncontroller.h
+debian/tmp/usr/include/libmmp/bulletdebugdrawer.h
+debian/tmp/usr/include/libmmp/pmx.h
+debian/tmp/usr/include/libmmp/shader.h
+debian/tmp/usr/include/libmmp/interpolation.h
+debian/tmp/usr/include/libmmp/vmd.h
+debian/tmp/usr/include/libmmp/mmdphysics.h
+debian/tmp/usr/include/libmmp/libmmp.h

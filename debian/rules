@@ -9,3 +9,8 @@ export DH_OPTIONS
 
 %:
 	dh $@  --with autoreconf
+
+override_dh_auto_install:
+	doxygen
+	dh_auto_install
+

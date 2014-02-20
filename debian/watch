@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/[-_]?(RC|PRE|ALPHA|BETA)/~$1/" \
+https://github.com/sn0w75/MikuMikuPenguin/tags .*/archive/v(\d.*)\.tar\.gz debian uupdate

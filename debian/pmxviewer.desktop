@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=pmxviewer
+Comment=
+TryExec=/usr/bin/pmxviewer
+Exec=pmxviewer
+#Icon=/usr/share/pixmaps/.png
+#Keywords=

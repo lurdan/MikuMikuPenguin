@@ -1,0 +1,3 @@
+debian/tmp/usr/share/mikumikupenguin/doc/README_JP.html usr/share/doc/libmmp-doc/
+debian/tmp/usr/share/mikumikupenguin/doc/README_EN.html usr/share/doc/libmmp-doc/
+doc/doxygen usr/share/doc/libmmp-doc/
