@@ -25,8 +25,8 @@ Last-Update: <YYYY-MM-DD>
 
 Index: mikumikupenguin/libmmp/mmdphysics.cpp
 ===================================================================
---- mikumikupenguin.orig/libmmp/mmdphysics.cpp	2014-02-10 18:54:11.000000000 +0900
-+++ mikumikupenguin/libmmp/mmdphysics.cpp	2014-02-10 18:56:19.000000000 +0900
+--- mikumikupenguin.orig/libmmp/mmdphysics.cpp	2014-02-20 20:26:23.000000000 +0900
++++ mikumikupenguin/libmmp/mmdphysics.cpp	2014-02-20 20:26:23.000000000 +0900
 @@ -192,7 +192,7 @@
  		
  		
@@ -38,8 +38,8 @@ Index: mikumikupenguin/libmmp/mmdphysics.cpp
  		
 Index: mikumikupenguin/src/viewer.cpp
 ===================================================================
---- mikumikupenguin.orig/src/viewer.cpp	2014-02-10 18:54:11.000000000 +0900
-+++ mikumikupenguin/src/viewer.cpp	2014-02-10 18:54:11.000000000 +0900
+--- mikumikupenguin.orig/src/viewer.cpp	2014-02-20 20:26:23.000000000 +0900
++++ mikumikupenguin/src/viewer.cpp	2014-02-20 20:26:23.000000000 +0900
 @@ -234,7 +234,7 @@
  	);
  	//View= glm::rotate(0.0f,0.0f,0.0f,1.0f)* View;
@@ -51,8 +51,8 @@ Index: mikumikupenguin/src/viewer.cpp
  	
 Index: mikumikupenguin/include/pmx.h
 ===================================================================
---- mikumikupenguin.orig/include/pmx.h	2014-02-10 18:17:01.000000000 +0900
-+++ mikumikupenguin/include/pmx.h	2014-02-10 18:56:50.000000000 +0900
+--- mikumikupenguin.orig/include/pmx.h	2014-02-20 20:26:23.000000000 +0900
++++ mikumikupenguin/include/pmx.h	2014-02-20 20:26:23.000000000 +0900
 @@ -5,6 +5,7 @@
  #include <string>
  #include <fstream>
@@ -63,8 +63,8 @@ Index: mikumikupenguin/include/pmx.h
  #include <glm/gtx/quaternion.hpp>
 Index: mikumikupenguin/include/vmd.h
 ===================================================================
---- mikumikupenguin.orig/include/vmd.h	2014-02-10 18:17:01.000000000 +0900
-+++ mikumikupenguin/include/vmd.h	2014-02-10 18:59:39.000000000 +0900
+--- mikumikupenguin.orig/include/vmd.h	2014-02-20 20:26:23.000000000 +0900
++++ mikumikupenguin/include/vmd.h	2014-02-20 20:26:23.000000000 +0900
 @@ -5,6 +5,7 @@
  #include <string>
  #include <fstream>
@@ -73,3 +73,16 @@ Index: mikumikupenguin/include/vmd.h
  #include <glm/gtc/matrix_transform.hpp> 
  #include <glm/gtx/transform.hpp>
  #include <glm/gtx/quaternion.hpp>
+Index: mikumikupenguin/libmmp/motioncontroller.cpp
+===================================================================
+--- mikumikupenguin.orig/libmmp/motioncontroller.cpp	2014-02-20 20:26:19.000000000 +0900
++++ mikumikupenguin/libmmp/motioncontroller.cpp	2014-02-20 20:26:52.000000000 +0900
+@@ -387,7 +387,7 @@
+ 						const glm::vec3 desired_euler = glm::radians(glm::eulerAngles(desired_rotation));
+ 						const glm::vec3 clamped_euler = glm::clamp(desired_euler, IKLink->lowerLimit, IKLink->upperLimit);
+ 						const glm::quat clamped_rotation(clamped_euler);
+-						const glm::mat4 translation = glm::translate(linkBone->Local[3][0], linkBone->Local[3][1], linkBone->Local[3][2]);
++						const glm::mat4 translation = glm::translate(glm::vec3(linkBone->Local[3][0], linkBone->Local[3][1], linkBone->Local[3][2]));
+ 						linkBone->Local = translation * glm::toMat4(clamped_rotation);
+ 					}
+ 					else
