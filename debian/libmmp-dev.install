@@ -1,5 +1,4 @@
-debian/tmp/usr/lib/i386-linux-gnu/libmmp.a
-debian/tmp/usr/lib/i386-linux-gnu/libmmp.la
+debian/tmp/usr/lib/*/libmmp.a
 debian/tmp/usr/include/libmmp/bulletphysics.h
 debian/tmp/usr/include/libmmp/texthandle.h
 debian/tmp/usr/include/libmmp/motioncontroller.h

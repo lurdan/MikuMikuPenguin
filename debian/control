@@ -10,11 +10,11 @@ Vcs-Browser: https://github.com/lurdan/MikuMikuPenguin/tree/dpkg
 
 Package: pmxviewer
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libmmp
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmmp0
 Description: MikuMikuDance PMX/VMD Viewer
  <insert long description, indented with spaces>
 
-Package: libmmp
+Package: libmmp0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: <insert up to 60 chars description>
@@ -22,7 +22,7 @@ Description: <insert up to 60 chars description>
 
 Package: libmmp-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libmmp
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmmp0
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
