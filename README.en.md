@@ -1,5 +1,7 @@
-# LibMikuMikuPenguin(libmmp) v0.1 Readme (English)
-Hello.
+[![Build Status](https://travis-ci.org/sn0w75/MikuMikuPenguin.png)](https://travis-ci.org/sn0w75/MikuMikuPenguin)
+
+# LibMikuMikuPenguin(libmmp) v0.2 Readme (English)
+Hello~
 
 I wanted to MikuMiku on my favorite operating system, so I wrote a program to do just that.
 It's still very buggy, and the API isn't particularly fixed in any manner so it's still too early to effectively use MMP as a library.
