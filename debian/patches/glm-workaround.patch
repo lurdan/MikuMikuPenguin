@@ -23,10 +23,10 @@ Forwarded: <no|not-needed|url proving that it has been forwarded>
 Reviewed-By: <name and email of someone who approved the patch>
 Last-Update: <YYYY-MM-DD>
 
-Index: mikumikupenguin/libmmp/mmdphysics.cpp
+Index: MikuMikuPenguin/libmmp/mmdphysics.cpp
 ===================================================================
---- mikumikupenguin.orig/libmmp/mmdphysics.cpp	2014-02-20 20:26:23.000000000 +0900
-+++ mikumikupenguin/libmmp/mmdphysics.cpp	2014-02-20 20:26:23.000000000 +0900
+--- MikuMikuPenguin.orig/libmmp/mmdphysics.cpp	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/libmmp/mmdphysics.cpp	2014-02-21 19:11:12.016293643 +0900
 @@ -192,7 +192,7 @@
  		
  		
@@ -36,10 +36,10 @@ Index: mikumikupenguin/libmmp/mmdphysics.cpp
  		rotation=glm::yawPitchRoll(r.y, r.x, r.z);
  		world = trans*rotation;	// ジョイントの行列（モデルローカル座標系）
  		
-Index: mikumikupenguin/src/viewer.cpp
+Index: MikuMikuPenguin/src/viewer.cpp
 ===================================================================
---- mikumikupenguin.orig/src/viewer.cpp	2014-02-20 20:26:23.000000000 +0900
-+++ mikumikupenguin/src/viewer.cpp	2014-02-20 20:26:23.000000000 +0900
+--- MikuMikuPenguin.orig/src/viewer.cpp	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/src/viewer.cpp	2014-02-21 19:11:12.016293643 +0900
 @@ -234,7 +234,7 @@
  	);
  	//View= glm::rotate(0.0f,0.0f,0.0f,1.0f)* View;
@@ -49,10 +49,10 @@ Index: mikumikupenguin/src/viewer.cpp
  	// Our ModelViewProjection : multiplication of our 3 matrices
  	glm::mat4 MVP = Projection * View * Model;
  	
-Index: mikumikupenguin/include/pmx.h
+Index: MikuMikuPenguin/include/pmx.h
 ===================================================================
---- mikumikupenguin.orig/include/pmx.h	2014-02-20 20:26:23.000000000 +0900
-+++ mikumikupenguin/include/pmx.h	2014-02-20 20:26:23.000000000 +0900
+--- MikuMikuPenguin.orig/include/pmx.h	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/include/pmx.h	2014-02-21 19:11:12.016293643 +0900
 @@ -5,6 +5,7 @@
  #include <string>
  #include <fstream>
@@ -61,10 +61,10 @@ Index: mikumikupenguin/include/pmx.h
  #include <glm/gtc/matrix_transform.hpp> 
  #include <glm/gtx/transform.hpp>
  #include <glm/gtx/quaternion.hpp>
-Index: mikumikupenguin/include/vmd.h
+Index: MikuMikuPenguin/include/vmd.h
 ===================================================================
---- mikumikupenguin.orig/include/vmd.h	2014-02-20 20:26:23.000000000 +0900
-+++ mikumikupenguin/include/vmd.h	2014-02-20 20:26:23.000000000 +0900
+--- MikuMikuPenguin.orig/include/vmd.h	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/include/vmd.h	2014-02-21 19:11:12.016293643 +0900
 @@ -5,6 +5,7 @@
  #include <string>
  #include <fstream>
@@ -73,10 +73,10 @@ Index: mikumikupenguin/include/vmd.h
  #include <glm/gtc/matrix_transform.hpp> 
  #include <glm/gtx/transform.hpp>
  #include <glm/gtx/quaternion.hpp>
-Index: mikumikupenguin/libmmp/motioncontroller.cpp
+Index: MikuMikuPenguin/libmmp/motioncontroller.cpp
 ===================================================================
---- mikumikupenguin.orig/libmmp/motioncontroller.cpp	2014-02-20 20:26:19.000000000 +0900
-+++ mikumikupenguin/libmmp/motioncontroller.cpp	2014-02-20 20:26:52.000000000 +0900
+--- MikuMikuPenguin.orig/libmmp/motioncontroller.cpp	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/libmmp/motioncontroller.cpp	2014-02-21 19:11:12.016293643 +0900
 @@ -387,7 +387,7 @@
  						const glm::vec3 desired_euler = glm::radians(glm::eulerAngles(desired_rotation));
  						const glm::vec3 clamped_euler = glm::clamp(desired_euler, IKLink->lowerLimit, IKLink->upperLimit);
@@ -86,3 +86,87 @@ Index: mikumikupenguin/libmmp/motioncontroller.cpp
  						linkBone->Local = translation * glm::toMat4(clamped_rotation);
  					}
  					else
+Index: MikuMikuPenguin/include/interpolation.h
+===================================================================
+--- MikuMikuPenguin.orig/include/interpolation.h	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/include/interpolation.h	2014-02-21 19:11:12.016293643 +0900
+@@ -1,6 +1,7 @@
+ #ifndef INTERPOLATION_H
+ #define INTERPOLATION_H
+ 
++#define GLM_FORCE_RADIANS
+ #include <glm/gtc/matrix_transform.hpp> 
+ #include <glm/gtc/quaternion.hpp>
+ #include <glm/gtx/transform.hpp>
+Index: MikuMikuPenguin/include/bulletdebugdrawer.h
+===================================================================
+--- MikuMikuPenguin.orig/include/bulletdebugdrawer.h	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/include/bulletdebugdrawer.h	2014-02-21 19:11:12.016293643 +0900
+@@ -1,6 +1,7 @@
+ #ifndef BULLET_DEBUG_DRAWER_H
+ #define BULLET_DEBUG_DRAWER_H
+ 
++#define GLM_FORCE_RADIANS
+ #include <GL/glew.h>
+ #include <GL/glfw.h>
+ #include "btBulletDynamicsCommon.h"
+Index: MikuMikuPenguin/include/bulletphysics.h
+===================================================================
+--- MikuMikuPenguin.orig/include/bulletphysics.h	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/include/bulletphysics.h	2014-02-21 19:11:12.016293643 +0900
+@@ -7,6 +7,7 @@
+ #include <string>
+ #include <fstream>
+ 
++#define GLM_FORCE_RADIANS
+ #include <glm/gtc/matrix_transform.hpp> 
+ #include <glm/gtx/transform.hpp>
+ #include <glm/gtx/quaternion.hpp>
+Index: MikuMikuPenguin/include/mmdphysics.h
+===================================================================
+--- MikuMikuPenguin.orig/include/mmdphysics.h	2014-02-21 19:11:12.020291644 +0900
++++ MikuMikuPenguin/include/mmdphysics.h	2014-02-21 19:11:12.016293643 +0900
+@@ -10,6 +10,7 @@
+ #include <string>
+ #include <fstream>
+ 
++#define GLM_FORCE_RADIANS
+ #include <glm/gtc/matrix_transform.hpp> 
+ #include <glm/gtx/transform.hpp>
+ #include <glm/gtx/quaternion.hpp>
+Index: MikuMikuPenguin/libmmp/glm_helper.h
+===================================================================
+--- MikuMikuPenguin.orig/libmmp/glm_helper.h	2014-02-20 20:36:42.899958780 +0900
++++ MikuMikuPenguin/libmmp/glm_helper.h	2014-02-21 19:11:56.645968704 +0900
+@@ -1,6 +1,7 @@
+ #if !defined(LIBMMP_GLM_HELPER_H)
+ #define LIBMMP_GLM_HELPER_H
+ 
++#define GLM_FORCE_RADIANS
+ #include <glm/gtc/quaternion.hpp>
+ #include <glm/glm.hpp>
+ #include <iosfwd>
+Index: MikuMikuPenguin/src/glfw_func_callbacks.h
+===================================================================
+--- MikuMikuPenguin.orig/src/glfw_func_callbacks.h	2014-02-20 20:36:42.903958781 +0900
++++ MikuMikuPenguin/src/glfw_func_callbacks.h	2014-02-21 19:13:01.085734237 +0900
+@@ -5,6 +5,7 @@
+ #define GLFW_INCLUDE_GLU
+ #include <GL/glfw.h>
+ 
++#define GLM_FORCE_RADIANS
+ #include <glm/gtc/matrix_transform.hpp> 
+ #include <glm/gtc/quaternion.hpp>
+ #include <glm/gtx/transform.hpp>
+Index: MikuMikuPenguin/src/viewer.h
+===================================================================
+--- MikuMikuPenguin.orig/src/viewer.h	2014-02-20 20:36:42.903958781 +0900
++++ MikuMikuPenguin/src/viewer.h	2014-02-21 19:12:27.490539438 +0900
+@@ -5,6 +5,7 @@
+ #define GLFW_INCLUDE_GLU
+ #include <GL/glfw.h>
+ 
++#define GLM_FORCE_RADIANS
+ #include <glm/gtc/matrix_transform.hpp> 
+ #include <glm/gtc/quaternion.hpp>
+ #include <glm/gtx/transform.hpp>
