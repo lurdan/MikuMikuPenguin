@@ -2,7 +2,7 @@ Source: mikumikupenguin
 Section: unknown
 Priority: optional
 Maintainer: KURASHIKI Satoru <lurdan@gmail.com>
-Build-Depends: debhelper (>= 9.0.0), dh-autoreconf, libglfw-dev (= 2.7.2-1), libglew-dev, libglm-dev (>= 0.9.5.1), libbullet-dev, libsoil-dev, libsdl2-dev, libsdl2-mixer-dev, doxygen
+Build-Depends: debhelper (>= 9.0.0), dh-autoreconf, libglfw-dev (= 2.7.2-1), libglew-dev, libglm-dev (= 0.9.4.6-2), libbullet-dev, libsoil-dev, libsdl2-dev, libsdl2-mixer-dev, doxygen
 Standards-Version: 3.9.5
 Homepage: https://github.com/sn0w75/MikuMikuPenguin
 Vcs-Git: git@github.com:lurdan/MikuMikuPenguin.git
